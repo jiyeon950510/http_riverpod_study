@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:http_riverpod_app/view/home/home_page.dart';
+import 'package:http_riverpod_app/view/pages/post/home/post_home_page.dart';
+
 
 
 final helloWorldProvider = Provider <String> ((ref) {
@@ -23,7 +24,7 @@ class MyApp extends ConsumerWidget {
 
     return MaterialApp(
       home: MaterialApp(
-        home: HomePage(),
+        home: PostHomePage(),
       ),
     );
   }

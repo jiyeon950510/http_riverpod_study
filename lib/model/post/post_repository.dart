@@ -1,4 +1,6 @@
-import '../dto/post_response_dto.dart';
+import 'package:http_riverpod_app/model/post/post.dart';
+
+import '../../dto/post/post_response_dto.dart';
 
 class PostRepository {
   static PostRepository _instance = PostRepository._single();
@@ -8,12 +10,12 @@ class PostRepository {
     return _instance;
   }
 
-  Future<List<PostDto>> findAll() {
+  Future<List<Post>> findAll() {
     return Future.delayed(Duration(seconds: 1), () {
       return [
-        PostDto(id: 1, title: "제목1"),
-        PostDto(id: 2, title: "제목2"),
-        PostDto(id: 3, title: "제목3"),
+        Post(id: 1, title: "제목1"),
+        Post(id: 2, title: "제목2"),
+        Post(id: 3, title: "제목3"),
       ];
     });
   }
